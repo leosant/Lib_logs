@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false">
+
+    <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="Threshold" value="ALL" />
+        <param name="File" value="log/all.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="|%d{dd-MM-yyyy HH:mm:ss}| |%-5p|  [%t] |--%c--| %C{1}.class %m %n" />
+        </layout>
+    </appender>
+
+    <appender name="errorAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="Threshold" value="ERROR" />
+        <param name="File" value="log/error.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p  [%t] --%c-- %C{1}.class %m %n" />
+        </layout>
+    </appender>
+
+    <root>
+        <priority value ="debug" />
+        <appender-ref ref="fileAppender" />
+        <appender-ref ref="errorAppender" />
+    </root>
+
+</log4j:configuration>

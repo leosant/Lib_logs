@@ -1,0 +1,6 @@
+#path
+*.idea
+*target
+*test
+#Logs
+*log
