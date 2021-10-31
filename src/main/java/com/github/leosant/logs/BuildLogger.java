@@ -8,6 +8,7 @@ public class BuildLogger extends ConsoleAppender{
 
     public static final Logger logger = initLogger();
 
+
     private static Logger initLogger() {
         Logger log = Logger.getLogger(BuildLogger.class);
         log.addAppender(configureLog());
