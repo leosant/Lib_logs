@@ -49,5 +49,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: ${{ github.workspace }}/settings.xml
+      - run: mvn deploy -s ${{ github.workspace }}/settings.xml
       - run: echo "🍏 This job's status is ${{ job.status }}."
