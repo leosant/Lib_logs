@@ -26,4 +26,11 @@
         </profile>
     </profiles>
 
+    <servers>
+        <server>
+            <id>github</id>
+            <username>leosant</username>
+        </server>
+    </servers>
+
 </settings>
