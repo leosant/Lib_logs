@@ -42,4 +42,4 @@ jobs:
       - name: Publish to GitHub Packages Apache Maven
         run: mvn deploy -s ~/.m2/settings.xml
         env:
-          GITHUB_TOKEN: ${{ secrets.leo_90 }}
+          GITHUB_TOKEN: ${{ GITHUB_TOKEN }}
